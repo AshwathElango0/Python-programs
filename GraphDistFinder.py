@@ -1,10 +1,10 @@
-from matplotlib import pyplot as plt
+from matplotlib import pyplot as plt          #importing necessary modules
 from random import choice
 from math import sqrt
 x_num_lst=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 y_num_lst=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-x_dataset=[]
+x_dataset=[]                                   #generating datasets
 y_dataset=[]
 for i in range(10):
     x_choice=choice(x_num_lst)
@@ -22,9 +22,9 @@ plt.ylabel("y-axis")
 plt.plot(x_dataset[6::], y_dataset[6::], 'bo')
 
 
-x_c=float(input("Enter x_c : "))
+x_c=float(input("Enter x_c : "))          #point you wish to identify
 y_c=float(input("Enter y_c : "))
-coords=[]
+coords=[]                                  #starting distance and color identification
 for i in range(10):
     coords.append([x_dataset[i], y_dataset[i]])
 red=0  
@@ -48,7 +48,7 @@ else:
     color='red'
     
         
-print(f"Closest point on the graph is {cc}")
+print(f"Closest point on the graph is {cc}")          #output
 print(f"Closest point on the graph is {color}")
 if color=='blue':
     plt.plot(x_c, y_c, 'bo')
